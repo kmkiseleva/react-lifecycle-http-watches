@@ -1,5 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
-import shortid from "shortid";
+import { useEffect, useState, useCallback } from "react";
 import convertTime from "./../../utils/convertTime";
 import styles from "./Watch.module.css";
 import Arrow from "./Arrow/Arrow";
