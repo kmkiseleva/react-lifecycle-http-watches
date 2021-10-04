@@ -6,6 +6,7 @@ import WorldWatches from "./components/WorldWatches";
 const initialState = [
   { id: "Moscow", name: "Moscow", timeZone: -3 },
   { id: "London", name: "London", timeZone: -1 },
+  { id: "Rome", name: "Rome", timeZone: -2 },
 ];
 
 function App() {

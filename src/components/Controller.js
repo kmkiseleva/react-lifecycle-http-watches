@@ -14,6 +14,13 @@ const Controller = ({ addNewWatches }) => {
     setWatch((prevState) => ({ ...prevState, [name]: value }));
   };
 
+  const resetForm = () => {
+    setWatch({
+      name: "",
+      timeZone: "",
+    });
+  };
+
   const onSubmitHandler = (e) => {
     e.preventDefault();
     const payload = {
@@ -21,6 +28,7 @@ const Controller = ({ addNewWatches }) => {
       id: shortid.generate(),
     };
     addNewWatches(payload);
+    resetForm();
   };
 
   return (
@@ -36,6 +44,7 @@ const Controller = ({ addNewWatches }) => {
           name="name"
           value={watch.name}
           onChange={onChangeHandler}
+          placeholder="Paris"
           required
         />
       </div>
@@ -54,6 +63,7 @@ const Controller = ({ addNewWatches }) => {
           name="timeZone"
           value={watch.timeZone}
           onChange={onChangeHandler}
+          placeholder="-2"
           required
         />
       </div>
